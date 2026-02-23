@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { motion } from 'motion/react'
 
 const Reviews = ({ photo, name, profession, review }) => {
@@ -26,6 +27,13 @@ const Reviews = ({ photo, name, profession, review }) => {
             <motion.p variants={children} className='mt-3 text-lg'>{review}</motion.p>
         </motion.div>
     )
+}
+
+Reviews.propTypes = {
+    photo: PropTypes.string,
+    name: PropTypes.string,
+    profession: PropTypes.string,
+    review: PropTypes.string
 }
 
 export default Reviews
