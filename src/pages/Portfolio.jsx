@@ -14,7 +14,7 @@ const Portfolio = () => {
       id: 1,
       photo: Landing,
       title: 'LANDING PAGE',
-      description: 'Exhibiting my skills in React JS, Tailwind and JavaScript',
+      description: 'Exhibiting skills in React JS, Tailwind and JavaScript',
       jsicon: javascript,
       tailwindicon: tailwind,
       reacticon: react
@@ -23,7 +23,7 @@ const Portfolio = () => {
       id: 2,
       photo: Landing1,
       title: 'AI AUTOMATION PAGE',
-      description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
+      description: 'Exhibiting skills in Recat JS, Tailwind and Javascript',
       jsicon: javascript,
       tailwindicon: tailwind,
       reacticon: react
@@ -32,7 +32,7 @@ const Portfolio = () => {
       id: 3,
       photo: Landing1,
       title: 'AI AUTOMATION PAGE',
-      description: 'Exhibiting my skills in Recat JS, Tailwind and Javascript',
+      description: 'Exhibiting skills in Recat JS, Tailwind and Javascript',
       jsicon: javascript,
       tailwindicon: tailwind,
       reacticon: react
