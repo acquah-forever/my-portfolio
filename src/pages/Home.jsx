@@ -25,7 +25,7 @@ const Home = () => {
     {
       id: 2,
       photo: babe1,
-      name: 'Sophi',
+      name: 'Turner',
       profession: 'Developer',
       review: 'His websites are always functional and you get what you asked for.'
     },
