@@ -1,22 +1,17 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-import { yupResolver } from '@hookform/resolvers/yup'
 import { motion } from 'motion/react'
 import { Send } from "lucide-react"
 import Undraw from '../assets/undraw.svg'
 
+
 const Form = () => {
+  
+  const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const schema = yup.object().shape({
-    subject: yup.string().required('Please fill in the subject'),
-    email: yup.string().email().required('Please enter your email'),
-    name: yup.string().required('Please enter your name')
-  })
-
-  const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
-
-  function onSubmit(data) { console.log(data) }
+  function onSubmit() {
+    alert('Message Sent')
+  }
 
   const parent = { hidden: { opacity: 0, y: -40 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, ease: "easeOut" } } }
   const children = { hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0 } }
@@ -28,20 +23,31 @@ const Form = () => {
 
         <h1 className="text-3xl sm:text-4xl font-bold text-center lg:text-left bg-linear-to-r from-orange-600 to-amber-400 text-transparent bg-clip-text">Contact Me</h1>
 
-        <motion.input variants={children} {...register('subject')} placeholder="Subject" className="w-full px-4 h-12 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
-        <p className="text-red-500 text-sm">{errors.subject?.message}</p>
+        <div className='space-y-2'>
+          <motion.input variants={children} placeholder="Subject" className="w-full px-4 h-12 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400" {...register('subject', { required: 'Enter Subject' })} />
+          {errors.subject && <p className='text-md text-red-500'>{errors.subject.message}</p>}
+        </div>
+
 
         <motion.div variants={children} className="grid gap-4 sm:grid-cols-2">
-          <input {...register('email')} type="email" placeholder="Email Address" className="w-full px-4 h-12 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
-          <input {...register('name')} placeholder="Your Name" className="w-full px-4 h-12 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400" />
+          <div className='space-y-2'>
+            <input type="email" placeholder="Email Address" className="w-full px-4 h-12 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400" {...register('email', { required: 'Enter Email Address' })} />
+            {errors.email && <p className='text-md text-red-500'>{errors.email.message}</p>}
+          </div>
+
+          <div className='space-y-2'>
+            <input placeholder="Your Name" className="w-full px-4 h-12 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400" {...register('name', { required: 'Enter Your Name' })} />
+            {errors.name && <p className='text-md text-red-500'>{errors.name.message}</p>}
+          </div>
         </motion.div>
 
-        <p className="text-red-500 text-sm">{errors.email?.message}</p>
-        <p className="text-red-500 text-sm">{errors.name?.message}</p>
+        <div className='space-y-2'>
+          <motion.textarea variants={children} placeholder="Enter your message..." className="w-full px-4 py-3 border rounded-lg shadow-sm resize-none min-h-30 focus:outline-none focus:ring-2 focus:ring-orange-400"{...register('note',{required:'Enter Your Message'})} />
+          {errors.note && <p className='text-md text-red-500'>{errors.note.message}</p>}
+        </div>
 
-        <motion.textarea variants={children} placeholder="Enter your message..." className="w-full px-4 py-3 border rounded-lg shadow-sm resize-none min-h-30 focus:outline-none focus:ring-2 focus:ring-orange-400" />
 
-        <motion.button variants={children} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg w-full sm:w-fit">
+        <motion.button variants={children} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg w-full sm:w-fit" type='submit'>
           <Send size={18} />
           Send Message
         </motion.button>

@@ -16,11 +16,11 @@ const About = () => {
     return (
         <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{ once: true, amount:0.3 }} className=' p-10 mb-20 space-y-7 flex flex-col justify-center items-center'>
             <motion.h1 variants={children} className='uppercase text-4xl font-semibold'>About Me</motion.h1>
-            <motion.h1 variants={children} className='text-2xl text-slate-600 dark:text-slate-300 text-center'>As a Software Engineer focused on front-end development with React, I’m driven by a commitment to
+            <motion.h1 variants={children} className='text-2xl text-slate-600 dark:text-slate-300 text-center'>As a Frontend Developer focused on front-end development with React, I’m driven by a commitment
                 <br />
-                performance and accessibility. I develop engaging, efficient web applications designed
+                to meeting client demands. I develop engaging, efficient web applications designed
                 <br />
-                to elevate the user experience and improve the web for everyone. At the moment, I am studying to get full certification in React Framework.</motion.h1>
+                to elevate the user experience and improve the web for everyone.</motion.h1>
         </motion.div>
     )
 }

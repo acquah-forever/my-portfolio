@@ -1,8 +1,10 @@
 import React from 'react'
 import { motion} from 'motion/react'
+import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const Projects = (props) => {
+  const navigate = useNavigate()
 
   let parent = {
     hidden: { opacity: 0, y: -70 },
@@ -11,6 +13,11 @@ const Projects = (props) => {
   let children = {
     hidden: { opacity: 0, y: -71 },
     visible: { opacity: 1, y: 0 }
+  }
+
+  function handleClick(){
+    navigate('/')
+
   }
 
 
@@ -30,7 +37,7 @@ const Projects = (props) => {
         <img className='w-10 h-10 object-contain' src={props.tailwindicon} alt="tailwind" />
         <img className='w-10 h-10 object-contain' src={props.reacticon} alt="react" />
       </div>
-      <motion.button variants={children} whileHover={{scale:1.2,y:-7}} whileTap={{scale:0.9,y:-12}} transition={{type:"spring",stiffness:400,damping:10}}  className='cursor-pointer mx-7 bg-emerald-400 p-2 rounded-md'>Launch</motion.button>
+      <motion.button variants={children} whileHover={{scale:1.2,y:-7}} whileTap={{scale:0.9,y:-12}} transition={{type:"spring",stiffness:400,damping:10}}  className='cursor-pointer mx-7 bg-emerald-400 p-2 rounded-md'onClick={handleClick}>Launch</motion.button>
 
     </motion.div>
   )
