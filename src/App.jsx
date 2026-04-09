@@ -14,7 +14,7 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='min-h-screen mx-auto py-4 bg-slate-100 dark:bg-slate-900 text-black dark:text-white'>
+    <div className='min-h-screen mx-auto'>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
