@@ -5,12 +5,6 @@ import Skills from '../components/Skills'
 import Reviews from '../components/Reviews'
 import Form from '../components/Form'
 import Footer from '../components/Footer'
-import babe from '../assets/babe.jpg'
-import babe1 from '../assets/babe1.jpg'
-import babe2 from '../assets/babe2.jpg'
-import babe3 from '../assets/babe3.jpg'
-import babe4 from '../assets/babe4.jpg'
-import babe5 from '../assets/babe5.jpg'
 
 
 const Home = () => {

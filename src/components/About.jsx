@@ -20,12 +20,20 @@ const About = () => {
                 I’m Kojo, a frontend engineer focused on crafting fast, accessible, and well-structured web interfaces. I work mainly with React and JavaScript, and I’m currently pushing further into full-web development to broaden my impact.
                 I’m particularly interested in building tools that improve workflows of my current projects. When I’m away from the keyboard, I’m usually exploring open-source ecosystems, refining my perspective on developer experience, or relaxing with travelling.
             </motion.h1>
-            <h1>5+</h1>
-            <h1>Projects Built</h1>
-            <h1>1+</h1>
-            <h1>Years Learning</h1>
-            <h1>∞</h1>
-            <h1>Relaxing</h1>
+            <div className='flex space-x-3'>
+                <div>
+                    <h1 className='text-center text-sky-500 font-bold text-3xl'>5+</h1>
+                    <h1 className='text-md'>Projects Built</h1>
+                </div>
+                <div>
+                    <h1 className='text-center text-sky-500 font-bold text-3xl'>1+</h1>
+                    <h1 className='text-md'>Years Learning</h1>
+                </div>
+                <div>
+                    <h1 className='text-center text-sky-500 font-bold text-3xl'>∞</h1>
+                    <h1 className='text-md'>Relaxing</h1>
+                </div>
+            </div>
 
 
 
