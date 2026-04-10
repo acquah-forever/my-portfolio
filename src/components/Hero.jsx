@@ -10,12 +10,16 @@ const Hero = () => {
     return (
         <motion.div initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }}
             className='relative min-h-screen bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat'>
-            <div className='absolute inset-0 bg-black/30 z-10'></div>
+            <div className='absolute inset-0 bg-black/20 z-10'></div>
             <div className='relative z-20 px-16'>
-                <section className='mx-auto flex min-h-screen max-w-6xl justify-center items-center px-6'>
+                <section className='mx-auto flex min-h-screen max-w-6xl justify-center items-center px-6'id='hero'>
                     <div className='space-y-10'>
                         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white text-center sm:text-left'>Hi, I'm Kojo Acquah Addo</h1>
                         <h2 className='mt-4 max-w-xl line-clamp-2 text-center sm:text-left text-xl sm:text-3xl md:text-4xl text-white/90'>Frontend Developer focused on Clean UI and Reliable Products.</h2>
+                        <div className='bg-slate-100/60 flex items-center justify-center py-2 rounded-full space-x-2 border max-w-60'>
+                            <div className='bg-green-500 w-3 h-3 rounded-full'></div>
+                            <h3 className='text-md'>Available for Opportunities</h3>
+                        </div>
                         <div className='flex justify-center sm:justify-start gap-5'>
                            <HashLink smooth to={'/'}><Facebook className='w-7 h-7 sm:w-10 sm:h-10 text-slate-100 object-contain'/></HashLink> 
                             <HashLink smooth to={'/'}><Twitter className='w-7 h-7 sm:w-10 sm:h-10 text-slate-100 object-contain' /></HashLink>
