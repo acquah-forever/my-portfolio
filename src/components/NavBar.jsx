@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import { motion, AnimatePresence } from 'motion/react'
 import { Menu, Moon, X } from 'lucide-react'
 import useMenu from '../hooks/useMenu'
@@ -22,12 +22,12 @@ const NavBar = () => {
   return (
     <div>
       <div className='bg-black fixed top-0 w-full z-60 text-white flex justify-between items-center px-5 py-3'>
-        <NavLink to={'/'}><h1 className='cursor-pointer text-xl hover:scale-115 transition-all ease-in-out duration-300'>Kojo Addo</h1></NavLink>
+        <HashLink smooth to={'/'}><h1 className='cursor-pointer text-xl hover:scale-115 transition-all ease-in-out duration-300'>Kojo Addo</h1></HashLink>
         <div className='flex space-x-3 sm:space-x-5 md:space-x-7 lg:space-x-10'>
 
           <ul className='hidden  sm:flex space-x-4 sm:space-x-5 md:space-x-10 tracking-tight items-center'>
-            <NavLink to={'/'}><li className='text-xl dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Home</li></NavLink>
-            <NavLink to={'/portfolio'}><li className='text-xl dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300'>Projects</li></NavLink>
+            <HashLink smooth className='text-xl dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/'}>Home</HashLink>
+            <HashLink smooth className='text-xl dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/projects'}>Project</HashLink>
           </ul>
           <div className=' flex space-x-2 items-center'>
             <button className='cursor-pointer' onClick={toggleMenu}>
@@ -40,12 +40,12 @@ const NavBar = () => {
       </div >
       <AnimatePresence>
         {mobileMenuIsOpen && (
-          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='sm:hidden fixed z-5 top-10 backdrop-blur-sm flex flex-col p-2 space-y-1 mx-5 mt-7 mb-7'>
+          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='sm:hidden fixed z-30 top-10 backdrop-blur-sm flex flex-col p-2 space-y-1 mx-5 mt-7 mb-7'>
             <motion.li variants={children}>
-             <NavLink to={'/'}><a className='cursor-pointer text-lg tracking-tight' onClick={() => toggleMenu(false)}>Home</a></NavLink> 
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight' to={'/'} onClick={() => toggleMenu(false)}>Home</HashLink>
             </motion.li>
             <motion.li variants={children}>
-             <NavLink to={'/projects'}><a className='cursor-pointer text-lg tracking-tight' onClick={() => toggleMenu(false)}>Projects</a></NavLink>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight' to={'/projects'} onClick={() => toggleMenu(false)}>Projects</HashLink>
             </motion.li>
           </motion.ul>
         )}
