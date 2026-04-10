@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'motion/react'
-import Profile from '../assets/bus.jpeg'
+import {Facebook,Twitter,Instagram,Youtube} from 'lucide-react'
+
 
 
 const Hero = () => {
@@ -13,6 +14,12 @@ const Hero = () => {
                     <div className='space-y-10'>
                         <h1 className='text-5xl md:text-6xl font-bold text-white text-center sm:text-left'>Hi, I'm Kojo Acquah Addo</h1>
                         <h1 className='mt-4 max-w-xl text-center sm:text-left text-3xl text-white/90'>Frontend Developer focused on Clean UI and Reliable Products.</h1>
+                        <div className='flex gap-5'>
+                            <Facebook className='w-10 h-10 text-slate-100 object-contain' />
+                            <Twitter className='w-10 h-10 text-slate-100 object-contain' />
+                            <Instagram className='w-10 h-10 text-slate-100 object-contain' />
+                            <Youtube className='w-10 h-10 text-slate-100 object-contain' />
+                        </div>
                     </div>
                 </section>
             </div>
