@@ -43,18 +43,18 @@ const NavBar = () => {
       </div >
       <AnimatePresence>
         {mobileMenuIsOpen && (
-          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='sm:hidden fixed z-30 top-10 backdrop-blur-sm flex flex-col p-2 space-y-1 mx-5 mt-7 mb-7'>
+          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='bg-slate-400/80 fixed z-30 top-5 flex flex-col p-4 space-y-3 h-50 mt-7 mb-7 w-full sm:hidden'>
             <motion.li variants={children}>
-              <HashLink smooth className='cursor-pointer text-lg tracking-tight' to={'/'} onClick={() => toggleMenu(false)}>Home</HashLink>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#hero'} onClick={() => toggleMenu(false)}>Home</HashLink>
+            </motion.li>
+            <motion.li variants={children} text-white>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#about'} onClick={() => toggleMenu(false)}>About</HashLink>
             </motion.li>
             <motion.li variants={children}>
-              <HashLink smooth className='cursor-pointer text-lg tracking-tight' to={'/about'} onClick={() => toggleMenu(false)}>About</HashLink>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/projects'} onClick={() => toggleMenu(false)}>Projects</HashLink>
             </motion.li>
             <motion.li variants={children}>
-              <HashLink smooth className='cursor-pointer text-lg tracking-tight' to={'/projects'} onClick={() => toggleMenu(false)}>Projects</HashLink>
-            </motion.li>
-            <motion.li variants={children}>
-              <HashLink smooth className='cursor-pointer text-lg tracking-tight' to={'/skills'} onClick={() => toggleMenu(false)}>Skills</HashLink>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/skills'} onClick={() => toggleMenu(false)}>Skills</HashLink>
             </motion.li>
           </motion.ul>
         )}
