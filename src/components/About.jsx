@@ -35,7 +35,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="shrink-0 max-w-lg w-full aspect-4/3 border bg-slate-300">
+            <div className="w-full max-w-lg aspect-4/3  border bg-slate-300/0  mx-auto md:mx-0">
                 <div className='flex items-center mt-3'>
                     <div className='px-3 flex space-x-1'>
                         <div className='w-3 h-3 bg-red-400 rounded-full'></div>
