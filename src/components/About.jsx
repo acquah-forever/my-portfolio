@@ -44,9 +44,9 @@ const About = () => {
                     </div>
                 </div>
                 <div className='border-t mt-2 border-slate-400'></div>
-                <div className='flex flex-wrap gap-1'>
-                    <button className={`px-4 sm:px-5 py-2 sm:py-3 cursor-pointer text-white text-sm sm:text-base rounded-t-xl transition-colors ${activeTab === 'About' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-700"}`} onClick={() => setActiveTab('About')}>About</button>
-                    <button className={`px-4 sm:px-5 py-2 sm:py-3 cursor-pointer text-white text-sm sm:text-base rounded-t-xl transition-colors ${activeTab === 'Comment' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-700"}`} onClick={() => setActiveTab('Comment')}>Comment</button>
+                <div className='mx-1 mt-2 flex flex-wrap gap-1'>
+                    <button className={`px-4 sm:px-5 py-2 sm:py-3 cursor-pointer text-white text-sm sm:text-base rounded-t-xl transition-colors ${activeTab === 'About' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`} onClick={() => setActiveTab('About')}>About</button>
+                    <button className={`px-4 sm:px-5 py-2 sm:py-3 cursor-pointer text-white text-sm sm:text-base rounded-t-xl transition-colors ${activeTab === 'Comment' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-500`} onClick={() => setActiveTab('Comment')}>Comment</button>
                 </div>
                 <div className='mt-1 h-full text-sm sm:text-base'>
                     <SyntaxHighlighter language='javascript' style={nightOwl}
