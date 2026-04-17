@@ -3,4 +3,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+* {
+    html: "smooth-scroll"
+}
+
 

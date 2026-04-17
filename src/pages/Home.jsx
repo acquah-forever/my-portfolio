@@ -5,6 +5,7 @@ import Skills from '../components/Skills'
 import ToolsSkills from '../components/ToolsSkills'
 import LearningSkills from '../components/LearningSkills'
 import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 import { getFrontend } from '../data/frontend'
 import { getTools } from '../data/tools'
 import { getLearning } from '../data/learning'
@@ -48,8 +49,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div id='projects' className='mt-30'>
+
+      <div id='projects' className='mt-30 mb-30'>
         <Projects />
+      </div>
+
+      <div id='contact' className='grid grid-cols-1 justify-items-center items-center mb-30'>
+        <Contact />
       </div>
     </div>
   )

@@ -50,7 +50,7 @@ const Hero = () => {
                             <button className={`cursor-pointer p-2 rounded-t-lg text-white ${activeTab === 'Skills' ? "bg-sky-500" : "bg-sky-800 hover:bg-sky-400"} transition-all duration-200`} onClick={() => setActiveTab('Skills')}>Skills</button>
                         </div>
 
-                        <div>
+                        <div className='text-sm'>
                             <SyntaxHighlighter language='javascript' style={nightOwl} >{data[activeTab]}</SyntaxHighlighter>
                         </div>
 
