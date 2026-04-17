@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'motion/react'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
@@ -17,6 +18,16 @@ const Home = () => {
   const tools = getTools()
   const learning = getLearning()
 
+  let parent = {
+    hidden: { opacity: 0, y: -70 },
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.25, duration: 0.7 } }
+  }
+
+  let children = {
+    hidden: { opacity: 0, y: -71 },
+    visible: { opacity: 1, y: 0 }
+  }
+
   return (
     <div>
       <div>
@@ -25,9 +36,9 @@ const Home = () => {
       <div className='mx-4 mb-20 sm:mx-8 lg:mx-20'>
         <About />
       </div>
-      <section id='skills'>
-        <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold  mb-5 sm:mb-7 text-center'>Tech <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Stack</span></h1>
-        <div className='px-4 sm:px-8 lg:px-20'>
+      <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, margin: "-100px" }} id='skills'>
+        <motion.h1 variants={children} className='text-2xl sm:text-3xl md:text-4xl font-bold  mb-5 sm:mb-7 text-center'>Tech <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Stack</span></motion.h1>
+        <motion.div variants={children} className='px-4 sm:px-8 lg:px-20'>
           <h1 className='font-mono text-2xl font-semibold'>//FrontEnd</h1>
 
           <div className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
@@ -47,8 +58,8 @@ const Home = () => {
             {learning.map((learn) => (<LearningSkills
               learn={learn} key={learn.id} />))}
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
       <div id='projects' className='mt-30 mb-30'>
         <Projects />
