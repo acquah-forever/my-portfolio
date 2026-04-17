@@ -14,7 +14,7 @@ let children = {
 
 const Projects = () => {
     return (
-        <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{once:false, margin:"-100px"}} className='mx-auto'>
+        <motion.div variants={parent} initial="hidden" whileInView="visible" viewport={{once:true, amount: 0.4}} className='mx-auto'>
             <div className='mt-20 text-center'>
                 <motion.h1 variants={children} className=' text-2xl sm:text-3xl md:text-4xl font-bold mb-20 sm:mb-7'>Featured <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Projects</span></motion.h1>
             </div>

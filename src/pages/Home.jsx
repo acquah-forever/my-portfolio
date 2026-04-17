@@ -36,7 +36,7 @@ const Home = () => {
       <div className='mx-4 mb-20 sm:mx-8 lg:mx-20'>
         <About />
       </div>
-      <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, margin: "-100px" }} id='skills'>
+      <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount:0.4 }} id='skills'>
         <motion.h1 variants={children} className='text-2xl sm:text-3xl md:text-4xl font-bold  mb-5 sm:mb-7 text-center'>Tech <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Stack</span></motion.h1>
         <motion.div variants={children} className='px-4 sm:px-8 lg:px-20'>
           <h1 className='font-mono text-2xl font-semibold'>//FrontEnd</h1>
