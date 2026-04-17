@@ -29,7 +29,9 @@ const NavBar = () => {
             <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#hero'}>Home</HashLink>
             <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#about'}>About</HashLink>
             <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#skills'}>Skills</HashLink>
-            <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/projects'}>Projects</HashLink>
+            <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#projects'}>Projects</HashLink>
+            <HashLink smooth className='text-md dark:bg-linear-to-r dark:from-orange-700 dark:to-amber-400 dark:text-transparent dark:bg-clip-text cursor-pointer hover:scale-115 transition-all ease-in-out duration-300' to={'/#contact'}>Contact</HashLink>
+
 
           </ul>
           <div className=' flex space-x-2 items-center'>
@@ -43,7 +45,7 @@ const NavBar = () => {
       </div >
       <AnimatePresence>
         {mobileMenuIsOpen && (
-          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='bg-slate-400/80 fixed z-30 top-5 flex flex-col px-10 py-3 space-y-3 h-50 mt-7 mb-7 w-full sm:hidden'>
+          <motion.ul variants={parent} initial="hidden" animate="visible" exit={{ opacity: 0, y: -70 }} className='bg-slate-400/80 fixed z-30 top-5 flex flex-col px-10 py-3 space-y-3 h-55 mt-7 mb-7 w-full sm:hidden'>
             <motion.li variants={children}>
               <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#hero'} onClick={() => toggleMenu(false)}>Home</HashLink>
             </motion.li>
@@ -51,10 +53,13 @@ const NavBar = () => {
               <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#about'} onClick={() => toggleMenu(false)}>About</HashLink>
             </motion.li>
             <motion.li variants={children}>
-              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/skills'} onClick={() => toggleMenu(false)}>Skills</HashLink>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#skills'} onClick={() => toggleMenu(false)}>Skills</HashLink>
             </motion.li>
             <motion.li variants={children}>
-              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/projects'} onClick={() => toggleMenu(false)}>Projects</HashLink>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#projects'} onClick={() => toggleMenu(false)}>Projects</HashLink>
+            </motion.li>
+            <motion.li variants={children}>
+              <HashLink smooth className='cursor-pointer text-lg tracking-tight text-white' to={'/#contact'} onClick={() => toggleMenu(false)}>Contact</HashLink>
             </motion.li>
           </motion.ul>
         )}

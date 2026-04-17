@@ -1,4 +1,5 @@
 import{ScrollText,Webhook,Funnel} from 'lucide-react'
+
 const learning = [
     {
         id:1,
@@ -13,7 +14,7 @@ const learning = [
     {
         id:3,
         svg:Funnel,
-        name:"Node JS"
+        name:"Node.js"
     }
 ]
 
