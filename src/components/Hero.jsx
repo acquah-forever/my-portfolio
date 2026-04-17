@@ -11,7 +11,7 @@ const Hero = () => {
     const data = getData()
 
     return (
-        <motion.div id='hero' initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeInOut' }} className="relative bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat">
+        <motion.div id='hero' initial={{ opacity: 0, y: -60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeInOut' }} className="relative bg-[url(https://cdn.pixabay.com/photo/2016/06/22/11/10/box-1472804_1280.png)] bg-cover bg-center bg-fixed bg-no-repeat">
             <div className="absolute inset-0 bg-black/20 z-10"></div>
             <div className="relative z-20 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-6xl">
