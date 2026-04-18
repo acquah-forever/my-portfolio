@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
         {errors.text && <p className='text-red-500 font-mono text-center'>{errors.text.message}</p>}
 
-        <div className='flex space-x-5 items-center mb-7'>
+        <div className='flex space-x-9 items-center mb-7'>
           <label className='font-mono'>Email</label>
           <input className='border p-2 max-w-lg w-full' type="email" placeholder='Enter Email'  {...register('email', { required: "Enter Your Email" })} />
         </div>
