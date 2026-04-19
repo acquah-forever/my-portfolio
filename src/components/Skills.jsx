@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Skills = ({ front }) => {
     const LucideComponent = front.svg
 
