@@ -39,7 +39,7 @@ const Home = () => {
       <motion.section variants={parent} initial="hidden" whileInView="visible" viewport={{ once: false, amount:0.4 }} id='skills'>
         <motion.h1 variants={children} className='text-2xl sm:text-3xl md:text-4xl font-bold  mb-5 sm:mb-7 text-center'>Tech <span className='bg-linear-to-bl from-sky-500 via-violet-300 to-indigo-400 bg-clip-text text-transparent'>Stack</span></motion.h1>
         <motion.div variants={children} className='px-4 sm:px-8 lg:px-20'>
-          <h1 className='font-mono text-2xl font-semibold'>//FrontEnd</h1>
+          <h1 className='font-mono text-2xl font-semibold'>//FrontEnd Tools</h1>
 
           <div className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
             {frontend.map((front) => (<Skills
@@ -47,13 +47,13 @@ const Home = () => {
             />))}
           </div>
 
-          <h1 className='font-mono text-2xl font-semibold'>//Tools</h1>
+          <h1 className='font-mono text-2xl font-semibold'>//Deployment Tools</h1>
           <div className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
             {tools.map((tool) => (<ToolsSkills
               tool={tool} key={tool.id} />))}
           </div>
 
-          <h1 className='font-mono text-2xl font-semibold'>//Learning</h1>
+          <h1 className='font-mono text-2xl font-semibold'>//Currently Learning</h1>
           <div className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
             {learning.map((learn) => (<LearningSkills
               learn={learn} key={learn.id} />))}
