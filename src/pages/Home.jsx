@@ -54,7 +54,7 @@ const Home = () => {
           </div>
 
           <h1 className='font-mono text-2xl font-semibold'>//Learning</h1>
-          <div className='max-w-5xl w-full grid grid-cols-3 space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
+          <div className='max-w-5xl w-full grid grid-cols-3 justify-items-center items-center space-y-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-5 mb-10'>
             {learning.map((learn) => (<LearningSkills
               learn={learn} key={learn.id} />))}
           </div>
