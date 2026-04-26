@@ -23,8 +23,8 @@ const Projects = () => {
             <motion.section variants={children} className='mx-4 sm:mx-6 md:mx-8 grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6'>
                 <div className='max-w-lg w-full sm:hover:scale-110 transition-all duration-200'>
                     <div className="card bg-base-100 w-full shadow-sm">
-                        <figure>
-                            <img
+                        <figure className="w-full aspect-video overflow-hidden">
+                            <img className='w-full h-full object-cover'
                                 src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Shoes" />
                         </figure>
@@ -47,8 +47,8 @@ const Projects = () => {
 
                 <div className='max-w-lg w-full sm:hover:scale-110 transition-all duration-200'>
                     <div className="card bg-base-100 w-full shadow-sm">
-                        <figure>
-                            <img
+                        <figure className="w-full aspect-video overflow-hidden">
+                            <img className='w-full h-full object-cover'
                                 src="https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="Shoes" />
                         </figure>
@@ -69,8 +69,8 @@ const Projects = () => {
 
                 <div className='max-w-lg w-full sm:hover:scale-110 transition-all duration-200'>
                     <div className="card bg-base-100 w-full shadow-sm">
-                        <figure>
-                            <img
+                        <figure className="w-full aspect-video overflow-hidden">
+                            <img className='w-full h-full object-cover'
                                 src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxvZ3xlbnwwfDB8MHx8fDA%3D"
                                 alt="Shoes" />
                         </figure>
