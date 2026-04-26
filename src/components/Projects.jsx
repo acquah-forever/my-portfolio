@@ -71,7 +71,7 @@ const Projects = () => {
                     <div className="card bg-base-100 w-full shadow-sm">
                         <figure>
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxvZ3xlbnwwfDB8MHx8fDA%3D"
                                 alt="Shoes" />
                         </figure>
                         <div className="card-body">
