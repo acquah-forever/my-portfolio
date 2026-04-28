@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'motion/react'
 
 let parent = {
-    hidden: { opacity: 0, y: -70 },
+    hidden: { opacity: 0, y: -69 },
     visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.24, duration: 0.7 } }
 }
 
@@ -26,7 +26,7 @@ const Projects = () => {
                         <figure className="w-full aspect-video overflow-hidden">
                             <img className='w-full h-full object-cover'
                                 src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Shoes" />
+                                alt="my-realestate" />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -50,7 +50,7 @@ const Projects = () => {
                         <figure className="w-full aspect-video overflow-hidden">
                             <img className='w-full h-full object-cover'
                                 src="https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="Shoes" />
+                                alt="my-ecommerce" />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -72,7 +72,7 @@ const Projects = () => {
                         <figure className="w-full aspect-video overflow-hidden">
                             <img className='w-full h-full object-cover'
                                 src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmxvZ3xlbnwwfDB8MHx8fDA%3D"
-                                alt="Shoes" />
+                                alt="my-blog" />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">
