@@ -43,7 +43,7 @@ const Hero = () => {
                             <Instagram className="w-6 h-6" />
                             <Youtube className="w-6 h-6" />
                         </motion.div>
-                        <motion.div variants={children} whileHover={{scale:1.2}} whileTap={{scale:0.65}} transition={{type:'spring', stiffness: 500, damping:7}} className="px-2 sm:px-4 mt-3">
+                        <motion.div variants={children} whileHover={{scale:1.1}} transition={{type:'spring', stiffness: 100, damping:10}} className="px-2 sm:px-4 mt-3">
                             <HashLink smooth to='/#projects' className="bg-sky-500 hover:bg-sky-800 transition px-6 py-3 rounded-full text-white border-3">View My Work</HashLink>
                         </motion.div>
                     </div>
